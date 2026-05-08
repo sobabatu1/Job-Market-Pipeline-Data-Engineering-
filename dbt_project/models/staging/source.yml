@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: postgres_raw  # This MUST match the first part of your {{ source() }} call
+    schema: raw         # This MUST match the actual schema in Postgres
+    tables:
+      - name: job_postings
+      - name: companies
+      - name: skills

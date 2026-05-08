@@ -1,0 +1,12 @@
+job_market_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      password: "Olayinka@1"
+      dbname: job_pipeline
+      schema: public
+      threads: 4
