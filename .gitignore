@@ -1,14 +1,17 @@
-# Virtual Environment
+# Environments
 venv/
-venv_311/
+.venv/
+env/
 
-# Environment Variables
-.env
-
-# Python Cache
+# Python/Database
 __pycache__/
 *.pyc
-
-# Database/Local Data
-data/raw/*.csv
+.env
 .DS_Store
+
+# Data & Logs
+data/raw/*.csv
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+logs/
