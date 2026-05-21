@@ -1,8 +1,8 @@
 **🚀 Job Market Data Pipeline (500k Scale)**
 A robust, end-to-end ELT pipeline that ingests, cleans, and transforms half a million job postings to uncover high-demand skills and salary benchmarks.
 
-💡 The Lesson Learnt: 
-Environment Isolation
+**💡 The Lesson Learnt:**
+**Environment Isolation**
 Throughout this project, I learned the hard way that "it works on my machine" is a myth unless you isolate your environment. I encountered multiple ModuleNotFoundError and version mismatch issues by relying on system-level Python.
 
 My Golden Rules for Stability:**
@@ -27,8 +27,8 @@ Data Quality Issues:
 Lack of Lineage: 
 No clear path from raw data to final business metrics.
 
-The Approach: 
-Medallion Architecture
+**The Approach:**
+**Medallion Architecture**
 I implemented a Medallion Architecture to ensure data reliability and scalability:
 
 **Bronze (Raw):**
