@@ -42,6 +42,8 @@ Solved the "Skills" problem by unnesting comma-separated strings into a normaliz
 
 **Gold (Marts):** Aggregated metrics into a final "Insights" table, ranking skills by demand and salary.
 
+**Graph**
+
 **Tech Stack**
 Language: Python 3.11.9
 
