@@ -6,7 +6,7 @@ job_market_pipeline:
       host: localhost
       port: 5432
       user: postgres
-      password: "Olayinka@1"
+      password: "{{ env_var('DB_PASSWORD') }}" # dbt will pull this from .env file
       dbname: job_pipeline
       schema: public
       threads: 4

@@ -4420,3 +4420,879 @@ drop table if exists "job_pipeline"."public_marts"."mart_job_market_insights__db
 [0m15:04:36.409699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcca1661e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcca0925670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc90e10e80>]}
 [0m15:04:36.410118 [debug] [MainThread]: Flushing usage events
 [0m15:04:36.612359 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:09:30.653485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8628bf1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8629535640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f862955f700>]}
+
+
+============================== 16:09:30.659316 | c74fa737-f877-416c-a3e2-6a47baf429cb ==============================
+[0m16:09:30.659316 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m16:09:30.659929 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/lbaba/job_market_pipeline/dbt_project/logs', 'profiles_dir': '/Users/lbaba/job_market_pipeline/dbt_project', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m16:09:34.033782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f860833f820>]}
+[0m16:09:34.083416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8608a52cd0>]}
+[0m16:09:34.084498 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m16:09:34.268109 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m16:09:34.424279 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:09:34.424749 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:09:34.460149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86104c0a60>]}
+[0m16:09:34.562347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f861035a6d0>]}
+[0m16:09:34.562973 [info ] [MainThread]: Found 3 models, 3 sources, 539 macros
+[0m16:09:34.563336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8608c6c550>]}
+[0m16:09:34.564872 [info ] [MainThread]: 
+[0m16:09:34.565280 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:09:34.565550 [info ] [MainThread]: 
+[0m16:09:34.566100 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:09:34.570740 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m16:09:34.579849 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m16:09:34.590924 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m16:09:34.681292 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m16:09:34.683267 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m16:09:34.684225 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m16:09:34.685324 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:09:34.686373 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:09:34.686771 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:09:34.687092 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:09:34.688352 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:09:34.689079 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:09:35.440950 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.753 seconds
+[0m16:09:35.441550 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.753 seconds
+[0m16:09:35.441899 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.755 seconds
+[0m16:09:35.443132 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m16:09:35.444122 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m16:09:35.445136 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m16:09:35.447292 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public_marts)
+[0m16:09:35.447924 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public_staging)
+[0m16:09:35.455016 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public)
+[0m16:09:35.455528 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_marts"
+[0m16:09:35.458048 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_staging"
+[0m16:09:35.460536 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public"
+[0m16:09:35.460966 [debug] [ThreadPool]: On list_job_pipeline_public_marts: BEGIN
+[0m16:09:35.461254 [debug] [ThreadPool]: On list_job_pipeline_public_staging: BEGIN
+[0m16:09:35.461511 [debug] [ThreadPool]: On list_job_pipeline_public: BEGIN
+[0m16:09:35.461782 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:09:35.462046 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:09:35.462299 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:09:35.498849 [debug] [ThreadPool]: SQL status: BEGIN in 0.036 seconds
+[0m16:09:35.499391 [debug] [ThreadPool]: SQL status: BEGIN in 0.038 seconds
+[0m16:09:35.499677 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public"
+[0m16:09:35.499951 [debug] [ThreadPool]: SQL status: BEGIN in 0.038 seconds
+[0m16:09:35.500232 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_marts"
+[0m16:09:35.500525 [debug] [ThreadPool]: On list_job_pipeline_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m16:09:35.500819 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_staging"
+[0m16:09:35.501102 [debug] [ThreadPool]: On list_job_pipeline_public_marts: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public_marts"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m16:09:35.501511 [debug] [ThreadPool]: On list_job_pipeline_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public_staging"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m16:09:35.557487 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.056 seconds
+[0m16:09:35.557907 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.057 seconds
+[0m16:09:35.558152 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.056 seconds
+[0m16:09:35.559273 [debug] [ThreadPool]: On list_job_pipeline_public_staging: ROLLBACK
+[0m16:09:35.560197 [debug] [ThreadPool]: On list_job_pipeline_public: ROLLBACK
+[0m16:09:35.561055 [debug] [ThreadPool]: On list_job_pipeline_public_marts: ROLLBACK
+[0m16:09:35.561838 [debug] [ThreadPool]: On list_job_pipeline_public: Close
+[0m16:09:35.562125 [debug] [ThreadPool]: On list_job_pipeline_public_staging: Close
+[0m16:09:35.562365 [debug] [ThreadPool]: On list_job_pipeline_public_marts: Close
+[0m16:09:35.568534 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:35.568938 [debug] [MainThread]: On master: BEGIN
+[0m16:09:35.569194 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:09:35.585210 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m16:09:35.585600 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:35.585950 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:09:35.687814 [debug] [MainThread]: SQL status: SELECT 1 in 0.101 seconds
+[0m16:09:35.688979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f862893a4f0>]}
+[0m16:09:35.689441 [debug] [MainThread]: On master: ROLLBACK
+[0m16:09:35.690441 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:35.690751 [debug] [MainThread]: On master: BEGIN
+[0m16:09:35.692086 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:09:35.692486 [debug] [MainThread]: On master: COMMIT
+[0m16:09:35.692760 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:35.693015 [debug] [MainThread]: On master: COMMIT
+[0m16:09:35.694080 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:09:35.694400 [debug] [MainThread]: On master: Close
+[0m16:09:35.698785 [debug] [Thread-1  ]: Began running node model.job_market_pipeline.stg_job_postings
+[0m16:09:35.699441 [info ] [Thread-1  ]: 1 of 3 START sql view model public_staging.stg_job_postings .................... [RUN]
+[0m16:09:35.699910 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_job_pipeline_public_marts, now model.job_market_pipeline.stg_job_postings)
+[0m16:09:35.700240 [debug] [Thread-1  ]: Began compiling node model.job_market_pipeline.stg_job_postings
+[0m16:09:35.711836 [debug] [Thread-1  ]: Writing injected SQL for node "model.job_market_pipeline.stg_job_postings"
+[0m16:09:35.712837 [debug] [Thread-1  ]: Began executing node model.job_market_pipeline.stg_job_postings
+[0m16:09:35.778436 [debug] [Thread-1  ]: Writing runtime sql for node "model.job_market_pipeline.stg_job_postings"
+[0m16:09:35.780690 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:35.781171 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: BEGIN
+[0m16:09:35.781485 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m16:09:35.871070 [debug] [Thread-1  ]: SQL status: BEGIN in 0.089 seconds
+[0m16:09:35.871672 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:35.872025 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+
+  create view "job_pipeline"."public_staging"."stg_job_postings__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw_data AS (
+    SELECT * FROM "job_pipeline"."raw"."job_postings"
+),
+
+final AS (
+    SELECT
+        job_id,
+        TRIM(title) AS job_title,
+        company_name,
+        location,
+        skills, 
+        CAST(salary_min AS NUMERIC) AS salary_min,
+        CAST(salary_max AS NUMERIC) AS salary_max,
+        CAST(posted_date AS DATE) AS posted_date,
+        -- ADD THIS LOGIC HERE:
+        CASE 
+            WHEN LOWER(location) LIKE '%remote%' THEN TRUE 
+            ELSE FALSE 
+        END AS is_remote
+    FROM raw_data
+)
+
+SELECT * FROM final
+  );
+[0m16:09:36.974478 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 1.101 seconds
+[0m16:09:36.987108 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:36.987620 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+alter table "job_pipeline"."public_staging"."stg_job_postings" rename to "stg_job_postings__dbt_backup"
+[0m16:09:37.048110 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.060 seconds
+[0m16:09:37.052847 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:37.053409 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+alter table "job_pipeline"."public_staging"."stg_job_postings__dbt_tmp" rename to "stg_job_postings"
+[0m16:09:37.054617 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:09:37.075000 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: COMMIT
+[0m16:09:37.075501 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:37.075818 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: COMMIT
+[0m16:09:37.213797 [debug] [Thread-1  ]: SQL status: COMMIT in 0.138 seconds
+[0m16:09:37.223841 [debug] [Thread-1  ]: Applying DROP to: "job_pipeline"."public_staging"."stg_job_postings__dbt_backup"
+[0m16:09:37.228339 [debug] [Thread-1  ]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m16:09:37.228833 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+drop view if exists "job_pipeline"."public_staging"."stg_job_postings__dbt_backup" cascade
+[0m16:09:37.449163 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.220 seconds
+[0m16:09:37.454277 [debug] [Thread-1  ]: On model.job_market_pipeline.stg_job_postings: Close
+[0m16:09:37.460547 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f860832ddc0>]}
+[0m16:09:37.462082 [info ] [Thread-1  ]: 1 of 3 OK created sql view model public_staging.stg_job_postings ............... [[32mCREATE VIEW[0m in 1.76s]
+[0m16:09:37.463471 [debug] [Thread-1  ]: Finished running node model.job_market_pipeline.stg_job_postings
+[0m16:09:37.466258 [debug] [Thread-3  ]: Began running node model.job_market_pipeline.int_job_skills_exploded
+[0m16:09:37.467618 [info ] [Thread-3  ]: 2 of 3 START sql table model public.int_job_skills_exploded .................... [RUN]
+[0m16:09:37.468542 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_job_pipeline_public, now model.job_market_pipeline.int_job_skills_exploded)
+[0m16:09:37.468971 [debug] [Thread-3  ]: Began compiling node model.job_market_pipeline.int_job_skills_exploded
+[0m16:09:37.503097 [debug] [Thread-3  ]: Writing injected SQL for node "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:37.504319 [debug] [Thread-3  ]: Began executing node model.job_market_pipeline.int_job_skills_exploded
+[0m16:09:37.546677 [debug] [Thread-3  ]: Writing runtime sql for node "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:37.548408 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:37.549466 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: BEGIN
+[0m16:09:37.549980 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m16:09:37.580015 [debug] [Thread-3  ]: SQL status: BEGIN in 0.030 seconds
+[0m16:09:37.580566 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:37.580942 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+
+  
+    
+
+  create  table "job_pipeline"."public"."int_job_skills_exploded__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- CTE 1: Get data from staging
+WITH staging_data AS (
+    SELECT 
+        job_id,
+        skills 
+    FROM "job_pipeline"."public_staging"."stg_job_postings"
+    WHERE skills IS NOT NULL 
+      AND skills != ''
+), -- <-- THIS COMMA IS MANDATORY
+
+-- CTE 2: Break the strings apart
+exploded_skills AS (
+    SELECT
+        job_id,
+        TRIM(UNNEST(STRING_TO_ARRAY(skills, ','))) AS skill_name
+    FROM staging_data
+) -- <-- NO COMMA HERE
+
+-- Final Output
+SELECT 
+    md5(cast(coalesce(cast(job_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(skill_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) AS job_skill_id,
+    job_id,
+    skill_name
+FROM exploded_skills
+  );
+  
+[0m16:09:45.466708 [debug] [Thread-3  ]: SQL status: SELECT 1251358 in 7.878 seconds
+[0m16:09:45.484191 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:45.484794 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+alter table "job_pipeline"."public"."int_job_skills_exploded" rename to "int_job_skills_exploded__dbt_backup"
+[0m16:09:45.490898 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.006 seconds
+[0m16:09:45.494122 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:45.494551 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+alter table "job_pipeline"."public"."int_job_skills_exploded__dbt_tmp" rename to "int_job_skills_exploded"
+[0m16:09:45.528778 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.034 seconds
+[0m16:09:45.536467 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: COMMIT
+[0m16:09:45.536932 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:45.537236 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: COMMIT
+[0m16:09:45.541167 [debug] [Thread-3  ]: SQL status: COMMIT in 0.003 seconds
+[0m16:09:45.619303 [debug] [Thread-3  ]: Applying DROP to: "job_pipeline"."public"."int_job_skills_exploded__dbt_backup"
+[0m16:09:45.622218 [debug] [Thread-3  ]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m16:09:45.622674 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+drop table if exists "job_pipeline"."public"."int_job_skills_exploded__dbt_backup" cascade
+[0m16:09:45.695863 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.073 seconds
+[0m16:09:45.697191 [debug] [Thread-3  ]: On model.job_market_pipeline.int_job_skills_exploded: Close
+[0m16:09:45.697860 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85f8064a00>]}
+[0m16:09:45.698734 [info ] [Thread-3  ]: 2 of 3 OK created sql table model public.int_job_skills_exploded ............... [[32mSELECT 1251358[0m in 8.23s]
+[0m16:09:45.699394 [debug] [Thread-3  ]: Finished running node model.job_market_pipeline.int_job_skills_exploded
+[0m16:09:45.701336 [debug] [Thread-2  ]: Began running node model.job_market_pipeline.mart_job_market_insights
+[0m16:09:45.701868 [info ] [Thread-2  ]: 3 of 3 START sql table model public_marts.mart_job_market_insights ............. [RUN]
+[0m16:09:45.702444 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_job_pipeline_public_staging, now model.job_market_pipeline.mart_job_market_insights)
+[0m16:09:45.702795 [debug] [Thread-2  ]: Began compiling node model.job_market_pipeline.mart_job_market_insights
+[0m16:09:45.706871 [debug] [Thread-2  ]: Writing injected SQL for node "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:45.707878 [debug] [Thread-2  ]: Began executing node model.job_market_pipeline.mart_job_market_insights
+[0m16:09:45.711910 [debug] [Thread-2  ]: Writing runtime sql for node "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:45.712809 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:45.713158 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: BEGIN
+[0m16:09:45.713466 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m16:09:45.787109 [debug] [Thread-2  ]: SQL status: BEGIN in 0.074 seconds
+[0m16:09:45.787597 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:45.787957 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+
+  
+    
+
+  create  table "job_pipeline"."public_marts"."mart_job_market_insights__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    skills.skill_name,
+    COUNT(DISTINCT skills.job_id) AS demand_count,
+    ROUND(AVG((stg.salary_min + stg.salary_max) / 2), 2) AS avg_market_salary,
+    -- This is the line that was failing:
+    ROUND(100.0 * COUNT(CASE WHEN stg.is_remote THEN 1 END) / COUNT(*), 2) AS remote_pct
+FROM "job_pipeline"."public"."int_job_skills_exploded" AS skills
+JOIN "job_pipeline"."public_staging"."stg_job_postings" AS stg 
+    ON skills.job_id = stg.job_id
+GROUP BY 1
+HAVING COUNT(DISTINCT skills.job_id) > 5
+ORDER BY demand_count DESC
+  );
+  
+[0m16:09:47.060016 [debug] [Thread-2  ]: SQL status: SELECT 10 in 1.272 seconds
+[0m16:09:47.063765 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:47.064178 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+alter table "job_pipeline"."public_marts"."mart_job_market_insights" rename to "mart_job_market_insights__dbt_backup"
+[0m16:09:47.065102 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:09:47.068345 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:47.068771 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+alter table "job_pipeline"."public_marts"."mart_job_market_insights__dbt_tmp" rename to "mart_job_market_insights"
+[0m16:09:47.069695 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:09:47.071362 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: COMMIT
+[0m16:09:47.071730 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:47.072028 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: COMMIT
+[0m16:09:47.073168 [debug] [Thread-2  ]: SQL status: COMMIT in 0.001 seconds
+[0m16:09:47.075714 [debug] [Thread-2  ]: Applying DROP to: "job_pipeline"."public_marts"."mart_job_market_insights__dbt_backup"
+[0m16:09:47.076451 [debug] [Thread-2  ]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m16:09:47.076782 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+drop table if exists "job_pipeline"."public_marts"."mart_job_market_insights__dbt_backup" cascade
+[0m16:09:47.078574 [debug] [Thread-2  ]: SQL status: DROP TABLE in 0.001 seconds
+[0m16:09:47.079872 [debug] [Thread-2  ]: On model.job_market_pipeline.mart_job_market_insights: Close
+[0m16:09:47.080433 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c74fa737-f877-416c-a3e2-6a47baf429cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8618c1a5b0>]}
+[0m16:09:47.081034 [info ] [Thread-2  ]: 3 of 3 OK created sql table model public_marts.mart_job_market_insights ........ [[32mSELECT 10[0m in 1.38s]
+[0m16:09:47.081642 [debug] [Thread-2  ]: Finished running node model.job_market_pipeline.mart_job_market_insights
+[0m16:09:47.082837 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:47.083204 [debug] [MainThread]: On master: BEGIN
+[0m16:09:47.083473 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:09:47.099069 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m16:09:47.099502 [debug] [MainThread]: On master: COMMIT
+[0m16:09:47.099776 [debug] [MainThread]: Using postgres connection "master"
+[0m16:09:47.100031 [debug] [MainThread]: On master: COMMIT
+[0m16:09:47.100599 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:09:47.100870 [debug] [MainThread]: On master: Close
+[0m16:09:47.101270 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:09:47.101514 [debug] [MainThread]: Connection 'model.job_market_pipeline.stg_job_postings' was properly closed.
+[0m16:09:47.101796 [debug] [MainThread]: Connection 'model.job_market_pipeline.mart_job_market_insights' was properly closed.
+[0m16:09:47.102114 [debug] [MainThread]: Connection 'model.job_market_pipeline.int_job_skills_exploded' was properly closed.
+[0m16:09:47.104522 [info ] [MainThread]: 
+[0m16:09:47.104999 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 12.54 seconds (12.54s).
+[0m16:09:47.105839 [debug] [MainThread]: Command end result
+[0m16:09:47.139349 [info ] [MainThread]: 
+[0m16:09:47.139891 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:09:47.140189 [info ] [MainThread]: 
+[0m16:09:47.140823 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m16:09:47.197712 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 16.655035, "process_user_time": 2.033221, "process_kernel_time": 0.840233, "process_mem_max_rss": "101523456", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:09:47.198267 [debug] [MainThread]: Command `dbt run` succeeded at 16:09:47.198173 after 16.66 seconds
+[0m16:09:47.198630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8628bf1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8618c3a910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f861035af40>]}
+[0m16:09:47.198986 [debug] [MainThread]: Flushing usage events
+[0m16:09:47.774829 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:07:08.626904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d87e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae331c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae33550>]}
+
+
+============================== 19:07:08.630274 | f13f9573-9d33-4b7e-85ba-8718ed010916 ==============================
+[0m19:07:08.630274 [info ] [MainThread]: Running with dbt=1.11.0-b3
+[0m19:07:08.630667 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_format': 'default', 'debug': 'False', 'write_json': 'True', 'printer_width': '80', 'profiles_dir': '/Users/lbaba/job_market_pipeline/dbt_project', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/lbaba/job_market_pipeline/dbt_project/logs', 'invocation_command': 'dbt deps', 'introspect': 'True'}
+[0m19:07:08.717242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f13f9573-9d33-4b7e-85ba-8718ed010916', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae02250>]}
+[0m19:07:08.758147 [debug] [MainThread]: Set downloads directory='/var/folders/bw/8q0mpdln5pz7n5zwj5j1_7jr0000gn/T/dbt-downloads-hlebvprw'
+[0m19:07:08.758490 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:07:09.429755 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:07:09.435039 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:07:09.539571 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:07:09.549003 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:07:10.017341 [info ] [MainThread]: Installed from version 1.3.3
+[0m19:07:10.017790 [info ] [MainThread]: Up to date!
+[0m19:07:10.018081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f13f9573-9d33-4b7e-85ba-8718ed010916', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a01ac40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b038c40>]}
+[0m19:07:10.041182 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.4666041, "process_in_blocks": "0", "process_kernel_time": 0.283969, "process_mem_max_rss": "108642304", "process_out_blocks": "0", "process_user_time": 1.103476}
+[0m19:07:10.041620 [debug] [MainThread]: Command `dbt deps` succeeded at 19:07:10.041555 after 1.47 seconds
+[0m19:07:10.041883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d87e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082dc1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0892e0>]}
+[0m19:07:10.042145 [debug] [MainThread]: Flushing usage events
+[0m19:07:11.651301 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:55:44.675209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c252a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c33e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c33d290>]}
+
+
+============================== 12:55:44.678287 | 4810dcd3-3a10-405e-8456-5566271eca2f ==============================
+[0m12:55:44.678287 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m12:55:44.678648 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'introspect': 'True', 'profiles_dir': '/Users/lbaba/job_market_pipeline/dbt_project', 'fail_fast': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'use_colors': 'True', 'log_path': '/Users/lbaba/job_market_pipeline/dbt_project/logs', 'warn_error': 'None', 'version_check': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m12:55:44.788977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2b7550>]}
+[0m12:55:44.822842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095cf990>]}
+[0m12:55:44.823472 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m12:55:45.055547 [debug] [MainThread]: checksum: 8c6ed4860827cb3f33d0f9545b6eba7b04a1d6e0616b855ebb32b8e5718e01ba, vars: {}, profile: job_market_pipeline, target: dev, version: 1.12.0b1
+[0m12:55:45.107720 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m12:55:45.108062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b5491d0>]}
+[0m12:55:45.847145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d62b810>]}
+[0m12:55:45.893437 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/lbaba/job_market_pipeline/dbt_project/target/manifest.json
+[0m12:55:45.896400 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/lbaba/job_market_pipeline/dbt_project/target/semantic_manifest.json
+[0m12:55:45.903459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d049750>]}
+[0m12:55:45.903761 [info ] [MainThread]: Found 3 models, 3 sources, 591 macros
+[0m12:55:45.903955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0f3350>]}
+[0m12:55:45.904914 [info ] [MainThread]: 
+[0m12:55:45.905111 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:55:45.905268 [info ] [MainThread]: 
+[0m12:55:45.905522 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:55:45.907679 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m12:55:45.907953 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m12:55:45.914123 [debug] [ThreadPool]: Acquiring new postgres connection 'list_job_pipeline'
+[0m12:55:45.981142 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m12:55:45.981385 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m12:55:45.981574 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline"
+[0m12:55:45.981774 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:55:45.981982 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:55:45.982158 [debug] [ThreadPool]: On list_job_pipeline: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:55:45.982330 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:45.982512 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:45.982700 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:46.038492 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.056 seconds
+[0m12:55:46.038769 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.056 seconds
+[0m12:55:46.038950 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.056 seconds
+[0m12:55:46.039742 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m12:55:46.040340 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m12:55:46.040885 [debug] [ThreadPool]: On list_job_pipeline: Close
+[0m12:55:46.042069 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public_staging)
+[0m12:55:46.042363 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public)
+[0m12:55:46.042611 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_job_pipeline, now list_job_pipeline_public_marts)
+[0m12:55:46.046196 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_staging"
+[0m12:55:46.047520 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public"
+[0m12:55:46.048730 [debug] [ThreadPool]: Using postgres connection "list_job_pipeline_public_marts"
+[0m12:55:46.048947 [debug] [ThreadPool]: On list_job_pipeline_public_staging: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public_staging"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m12:55:46.049167 [debug] [ThreadPool]: On list_job_pipeline_public: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m12:55:46.049376 [debug] [ThreadPool]: On list_job_pipeline_public_marts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "list_job_pipeline_public_marts"} */
+select
+      'job_pipeline' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'job_pipeline' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'job_pipeline' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m12:55:46.049561 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:55:46.049720 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:55:46.049874 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:55:46.082935 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.033 seconds
+[0m12:55:46.083702 [debug] [ThreadPool]: On list_job_pipeline_public_staging: ROLLBACK
+[0m12:55:46.083911 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.034 seconds
+[0m12:55:46.084478 [debug] [ThreadPool]: On list_job_pipeline_public: ROLLBACK
+[0m12:55:46.084659 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.035 seconds
+[0m12:55:46.085195 [debug] [ThreadPool]: On list_job_pipeline_public_marts: ROLLBACK
+[0m12:55:46.085365 [debug] [ThreadPool]: On list_job_pipeline_public_staging: Close
+[0m12:55:46.085529 [debug] [ThreadPool]: On list_job_pipeline_public: Close
+[0m12:55:46.085690 [debug] [ThreadPool]: On list_job_pipeline_public_marts: Close
+[0m12:55:46.088550 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:46.088798 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m12:55:46.089007 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:55:46.106695 [debug] [MainThread]: SQL status: SELECT 1 in 0.018 seconds
+[0m12:55:46.107293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1316d0>]}
+[0m12:55:46.107540 [debug] [MainThread]: On master: ROLLBACK
+[0m12:55:46.107922 [debug] [MainThread]: On master: COMMIT
+[0m12:55:46.108079 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:46.108225 [debug] [MainThread]: On master: COMMIT
+[0m12:55:46.108773 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:55:46.108927 [debug] [MainThread]: On master: Close
+[0m12:55:46.110352 [debug] [Thread-1 (]: Began running node model.job_market_pipeline.stg_job_postings
+[0m12:55:46.110629 [info ] [Thread-1 (]: 1 of 3 START sql view model public_staging.stg_job_postings .................... [RUN]
+[0m12:55:46.110876 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_job_pipeline_public_staging, now model.job_market_pipeline.stg_job_postings)
+[0m12:55:46.111063 [debug] [Thread-1 (]: Began compiling node model.job_market_pipeline.stg_job_postings
+[0m12:55:46.116188 [debug] [Thread-1 (]: Writing injected SQL for node "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.116600 [debug] [Thread-1 (]: Began executing node model.job_market_pipeline.stg_job_postings
+[0m12:55:46.135959 [debug] [Thread-1 (]: Writing runtime sql for node "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.136736 [debug] [Thread-1 (]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.136964 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+
+  create view "job_pipeline"."public_staging"."stg_job_postings__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw_data AS (
+    SELECT * FROM "job_pipeline"."raw"."job_postings"
+),
+
+final AS (
+    SELECT
+        job_id,
+        TRIM(title) AS job_title,
+        company_name,
+        location,
+        skills, 
+        CAST(salary_min AS NUMERIC) AS salary_min,
+        CAST(salary_max AS NUMERIC) AS salary_max,
+        CAST(posted_date AS DATE) AS posted_date,
+        -- ADD THIS LOGIC HERE:
+        CASE 
+            WHEN LOWER(location) LIKE '%remote%' THEN TRUE 
+            ELSE FALSE 
+        END AS is_remote
+    FROM raw_data
+)
+
+SELECT * FROM final
+  );
+[0m12:55:46.137174 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:55:46.171562 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.034 seconds
+[0m12:55:46.175201 [debug] [Thread-1 (]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.175420 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+alter table "job_pipeline"."public_staging"."stg_job_postings" rename to "stg_job_postings__dbt_backup"
+[0m12:55:46.177092 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:55:46.178699 [debug] [Thread-1 (]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.178898 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+alter table "job_pipeline"."public_staging"."stg_job_postings__dbt_tmp" rename to "stg_job_postings"
+[0m12:55:46.179535 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:55:46.189001 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: COMMIT
+[0m12:55:46.189217 [debug] [Thread-1 (]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.189400 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: COMMIT
+[0m12:55:46.190885 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m12:55:46.194084 [debug] [Thread-1 (]: Applying DROP to: "job_pipeline"."public_staging"."stg_job_postings__dbt_backup"
+[0m12:55:46.196602 [debug] [Thread-1 (]: Using postgres connection "model.job_market_pipeline.stg_job_postings"
+[0m12:55:46.196807 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.stg_job_postings"} */
+drop view if exists "job_pipeline"."public_staging"."stg_job_postings__dbt_backup" cascade
+[0m12:55:46.201032 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m12:55:46.202269 [debug] [Thread-1 (]: On model.job_market_pipeline.stg_job_postings: Close
+[0m12:55:46.203529 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9aa550>]}
+[0m12:55:46.203861 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public_staging.stg_job_postings ............... [[32mCREATE VIEW[0m in 0.09s]
+[0m12:55:46.204160 [debug] [Thread-1 (]: Finished running node model.job_market_pipeline.stg_job_postings
+[0m12:55:46.204508 [debug] [Thread-3 (]: Began running node model.job_market_pipeline.int_job_skills_exploded
+[0m12:55:46.204833 [info ] [Thread-3 (]: 2 of 3 START sql table model public.int_job_skills_exploded .................... [RUN]
+[0m12:55:46.205061 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_job_pipeline_public_marts, now model.job_market_pipeline.int_job_skills_exploded)
+[0m12:55:46.205250 [debug] [Thread-3 (]: Began compiling node model.job_market_pipeline.int_job_skills_exploded
+[0m12:55:46.207594 [debug] [Thread-3 (]: Writing injected SQL for node "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:46.207984 [debug] [Thread-3 (]: Began executing node model.job_market_pipeline.int_job_skills_exploded
+[0m12:55:46.221477 [debug] [Thread-3 (]: Writing runtime sql for node "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:46.222279 [debug] [Thread-3 (]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:46.222523 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+
+  
+    
+
+  create  table "job_pipeline"."public"."int_job_skills_exploded__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- CTE 1: Get data from staging
+WITH staging_data AS (
+    SELECT 
+        job_id,
+        skills 
+    FROM "job_pipeline"."public_staging"."stg_job_postings"
+    WHERE skills IS NOT NULL 
+      AND skills != ''
+), -- <-- THIS COMMA IS MANDATORY
+
+-- CTE 2: Break the strings apart
+exploded_skills AS (
+    SELECT
+        job_id,
+        TRIM(UNNEST(STRING_TO_ARRAY(skills, ','))) AS skill_name
+    FROM staging_data
+) -- <-- NO COMMA HERE
+
+-- Final Output
+SELECT 
+    md5(cast(coalesce(cast(job_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(skill_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) AS job_skill_id,
+    job_id,
+    skill_name
+FROM exploded_skills
+  );
+  
+[0m12:55:46.222743 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m12:55:51.226542 [debug] [Thread-3 (]: SQL status: SELECT 1251358 in 5.002 seconds
+[0m12:55:51.240230 [debug] [Thread-3 (]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:51.240504 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+alter table "job_pipeline"."public"."int_job_skills_exploded" rename to "int_job_skills_exploded__dbt_backup"
+[0m12:55:51.241581 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:55:51.243211 [debug] [Thread-3 (]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:51.243407 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+alter table "job_pipeline"."public"."int_job_skills_exploded__dbt_tmp" rename to "int_job_skills_exploded"
+[0m12:55:51.267164 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.023 seconds
+[0m12:55:51.270076 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: COMMIT
+[0m12:55:51.270424 [debug] [Thread-3 (]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:51.270625 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: COMMIT
+[0m12:55:51.273030 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:55:51.274779 [debug] [Thread-3 (]: Applying DROP to: "job_pipeline"."public"."int_job_skills_exploded__dbt_backup"
+[0m12:55:51.276500 [debug] [Thread-3 (]: Using postgres connection "model.job_market_pipeline.int_job_skills_exploded"
+[0m12:55:51.276711 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.int_job_skills_exploded"} */
+drop table if exists "job_pipeline"."public"."int_job_skills_exploded__dbt_backup" cascade
+[0m12:55:51.297803 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.021 seconds
+[0m12:55:51.300071 [debug] [Thread-3 (]: On model.job_market_pipeline.int_job_skills_exploded: Close
+[0m12:55:51.301198 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d51a890>]}
+[0m12:55:51.301929 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public.int_job_skills_exploded ............... [[32mSELECT 1251358[0m in 5.10s]
+[0m12:55:51.302329 [debug] [Thread-3 (]: Finished running node model.job_market_pipeline.int_job_skills_exploded
+[0m12:55:51.302940 [debug] [Thread-2 (]: Began running node model.job_market_pipeline.mart_job_market_insights
+[0m12:55:51.303383 [info ] [Thread-2 (]: 3 of 3 START sql table model public_marts.mart_job_market_insights ............. [RUN]
+[0m12:55:51.303744 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_job_pipeline_public, now model.job_market_pipeline.mart_job_market_insights)
+[0m12:55:51.303960 [debug] [Thread-2 (]: Began compiling node model.job_market_pipeline.mart_job_market_insights
+[0m12:55:51.306058 [debug] [Thread-2 (]: Writing injected SQL for node "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:51.306555 [debug] [Thread-2 (]: Began executing node model.job_market_pipeline.mart_job_market_insights
+[0m12:55:51.308704 [debug] [Thread-2 (]: Writing runtime sql for node "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:51.309460 [debug] [Thread-2 (]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:51.309737 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+
+  
+    
+
+  create  table "job_pipeline"."public_marts"."mart_job_market_insights__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    skills.skill_name,
+    COUNT(DISTINCT skills.job_id) AS demand_count,
+    ROUND(AVG((stg.salary_min + stg.salary_max) / 2), 2) AS avg_market_salary,
+    -- This is the line that was failing:
+    ROUND(100.0 * COUNT(CASE WHEN stg.is_remote THEN 1 END) / COUNT(*), 2) AS remote_pct
+FROM "job_pipeline"."public"."int_job_skills_exploded" AS skills
+JOIN "job_pipeline"."public_staging"."stg_job_postings" AS stg 
+    ON skills.job_id = stg.job_id
+GROUP BY 1
+HAVING COUNT(DISTINCT skills.job_id) > 5
+ORDER BY demand_count DESC
+  );
+  
+[0m12:55:51.309970 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m12:55:52.361264 [debug] [Thread-2 (]: SQL status: SELECT 10 in 1.051 seconds
+[0m12:55:52.368029 [debug] [Thread-2 (]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:52.368640 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+alter table "job_pipeline"."public_marts"."mart_job_market_insights" rename to "mart_job_market_insights__dbt_backup"
+[0m12:55:52.369588 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:55:52.371584 [debug] [Thread-2 (]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:52.371801 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+alter table "job_pipeline"."public_marts"."mart_job_market_insights__dbt_tmp" rename to "mart_job_market_insights"
+[0m12:55:52.372297 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:55:52.373079 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: COMMIT
+[0m12:55:52.373274 [debug] [Thread-2 (]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:52.373445 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: COMMIT
+[0m12:55:52.373958 [debug] [Thread-2 (]: SQL status: COMMIT in 0.000 seconds
+[0m12:55:52.375295 [debug] [Thread-2 (]: Applying DROP to: "job_pipeline"."public_marts"."mart_job_market_insights__dbt_backup"
+[0m12:55:52.376777 [debug] [Thread-2 (]: Using postgres connection "model.job_market_pipeline.mart_job_market_insights"
+[0m12:55:52.376971 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "job_market_pipeline", "target_name": "dev", "node_id": "model.job_market_pipeline.mart_job_market_insights"} */
+drop table if exists "job_pipeline"."public_marts"."mart_job_market_insights__dbt_backup" cascade
+[0m12:55:52.382814 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m12:55:52.383460 [debug] [Thread-2 (]: On model.job_market_pipeline.mart_job_market_insights: Close
+[0m12:55:52.383800 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4810dcd3-3a10-405e-8456-5566271eca2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d505410>]}
+[0m12:55:52.384137 [info ] [Thread-2 (]: 3 of 3 OK created sql table model public_marts.mart_job_market_insights ........ [[32mSELECT 10[0m in 1.08s]
+[0m12:55:52.384506 [debug] [Thread-2 (]: Finished running node model.job_market_pipeline.mart_job_market_insights
+[0m12:55:52.385350 [debug] [MainThread]: On master: COMMIT
+[0m12:55:52.385557 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:52.385718 [debug] [MainThread]: On master: COMMIT
+[0m12:55:52.385868 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:55:52.393220 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m12:55:52.393467 [debug] [MainThread]: On master: Close
+[0m12:55:52.393717 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:55:52.393874 [debug] [MainThread]: Connection 'model.job_market_pipeline.stg_job_postings' was properly closed.
+[0m12:55:52.394017 [debug] [MainThread]: Connection 'model.job_market_pipeline.mart_job_market_insights' was properly closed.
+[0m12:55:52.394158 [debug] [MainThread]: Connection 'model.job_market_pipeline.int_job_skills_exploded' was properly closed.
+[0m12:55:52.394418 [info ] [MainThread]: 
+[0m12:55:52.394615 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 6.49 seconds (6.49s).
+[0m12:55:52.395096 [debug] [MainThread]: Command end result
+[0m12:55:52.418313 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/lbaba/job_market_pipeline/dbt_project/target/manifest.json
+[0m12:55:52.421105 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/lbaba/job_market_pipeline/dbt_project/target/semantic_manifest.json
+[0m12:55:52.425328 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/lbaba/job_market_pipeline/dbt_project/target/run_results.json
+[0m12:55:52.425517 [info ] [MainThread]: 
+[0m12:55:52.425752 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:55:52.426182 [info ] [MainThread]: 
+[0m12:55:52.426486 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m12:55:52.629453 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.011372, "process_in_blocks": "0", "process_kernel_time": 0.235569, "process_mem_max_rss": "145702912", "process_out_blocks": "0", "process_user_time": 2.008295}
+[0m12:55:52.629878 [debug] [MainThread]: Command `dbt run` succeeded at 12:55:52.629823 after 8.01 seconds
+[0m12:55:52.630171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c363710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c363610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8da5d0>]}
+[0m12:55:52.630385 [debug] [MainThread]: Flushing usage events
+[0m12:55:53.930311 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,10 +1,11 @@
 import pandas as pd
-from sqlalchemy import create_engine, text  # Add 'text' here
+from sqlalchemy import create_engine, text  
+from dotenv import load_dotenv
 import os
 import urllib.parse
 
 # 1. Properly encode the password
-password = urllib.parse.quote_plus("Olayinka@1")
+password = os.getenv("DB_PASSWORD")
 DB_URL = f"postgresql://postgres:{password}@localhost:5432/job_pipeline"
 engine = create_engine(DB_URL)
 

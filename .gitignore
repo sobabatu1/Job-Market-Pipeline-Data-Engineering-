@@ -1,0 +1,14 @@
+# Virtual Environment
+venv/
+venv_311/
+
+# Environment Variables
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Database/Local Data
+data/raw/*.csv
+.DS_Store

@@ -1,8 +1,13 @@
 from jobspy import scrape_jobs
 import pandas as pd
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
+import os
 
-engine = create_engine(f"postgresql://postgres:Olayinka%401@localhost:5432/job_pipeline")
+load_dotenv() # Loads the .env file
+password = os.getenv("DB_PASSWORD")
+engine = create_engine(f"postgresql://user:{password}@localhost:5432/job_pipeline")
+##engine = create_engine(f"postgresql://postgres:Olayinka%401@localhost:5432/job_pipeline")
 
 def scrape_and_append():
     # Fetch live data from 3 major platforms

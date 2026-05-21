@@ -8,7 +8,7 @@ WITH staging_data AS (
     FROM {{ ref('stg_job_postings') }}
     WHERE skills IS NOT NULL 
       AND skills != ''
-), -- <-- THIS COMMA IS MANDATORY
+), 
 
 -- CTE 2: Break the strings apart
 exploded_skills AS (
@@ -16,7 +16,7 @@ exploded_skills AS (
         job_id,
         TRIM(UNNEST(STRING_TO_ARRAY(skills, ','))) AS skill_name
     FROM staging_data
-) -- <-- NO COMMA HERE
+) 
 
 -- Final Output
 SELECT 

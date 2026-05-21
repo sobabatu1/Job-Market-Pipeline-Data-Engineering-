@@ -1,4 +1,4 @@
-#!/Users/lbaba/job_market_pipeline/venv/bin/python3
+#!/Users/lbaba/job_market_pipeline/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
